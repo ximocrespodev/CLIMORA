@@ -1,0 +1,35 @@
+<!-- Temperatura en tiempo real -->
+<div id="temperatura" style="font-size:80px;font-weight:bold;">-- °C</div>
+<script>
+function actualizarTemperatura() {
+    fetch('/wp-content/datos/datos_sensor.json?t=' + Date.now())
+    .then(response => response.json())
+    .then(data => {
+        let temp = parseFloat(data.temperatura);
+        if (!isNaN(temp)) {
+            document.getElementById("temperatura").innerHTML = temp.toFixed(1) + " °C";
+        }
+    })
+    .catch(error => console.log(error));
+}
+actualizarTemperatura();
+setInterval(actualizarTemperatura, 5000); // Se actualiza cada 5 segundos
+</script>
+
+<!-- Lluvia acumulada -->
+<div id="lluvia" style="font-size:50px;font-weight:bold;">-- mm</div>
+<script>
+function actualizarLluvia() {
+    fetch('/wp-content/datos/datos_sensor.json?t=' + Date.now())
+    .then(response => response.json())
+    .then(data => {
+        let l = parseFloat(data.lluvia_acumulada);
+        if (!isNaN(l) && l >= 0) {
+            document.getElementById("lluvia").innerHTML = l.toFixed(1) + " mm";
+        }
+    })
+    .catch(error => console.log(error));
+}
+actualizarLluvia();
+setInterval(actualizarLluvia, 5000);
+</script>
