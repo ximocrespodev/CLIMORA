@@ -1,5 +1,12 @@
 # ☁️ CLIMORA: Estación Meteorológica IoT & Servidor de Alta Disponibilidad
-![Status](https://img.shields.io/badge/Status-En%20Desarrollo-orange?style=for-the-badge&logo=git&logoColor=white)
+
+> 🚧 **¡Proyecto en fase de documentación y actualización!** 
+> 
+> Actualmente estoy subiendo, ordenando y refactorizando todo el contenido generado durante mi Proyecto Final de SMR (Climora). ¡Pronto estará al 100% pulido!
+
+
+
+
 <div align="center">
 
 ![Grado Medio SMR](https://img.shields.io/badge/Grado_Medio-SMR-blue?style=for-the-badge)
